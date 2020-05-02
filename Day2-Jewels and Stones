@@ -1,0 +1,8 @@
+class Solution:
+    def numJewelsInStones(self, J: str, S: str) -> int:
+        sum = 0
+        for ele in J:
+            if ele in S:
+                sum+=S.count(ele)
+        return sum
+        
