@@ -1,0 +1,6 @@
+class Solution:
+    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+        for ele in set(ransomNote):
+            if magazine.count(ele)<ransomNote.count(ele):
+                return False
+        return True
