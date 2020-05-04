@@ -1,0 +1,11 @@
+class Solution:
+    def findComplement(self, n: int) -> int:
+        Complement = 0
+        i = 0
+        while n!=1:
+            rem = n%2
+            if rem==0:
+                Complement = Complement + pow(2,i)
+            i+=1
+            n = n//2
+        return Complement
