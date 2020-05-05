@@ -1,0 +1,12 @@
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        d = {}
+        for ele in s:
+            d[ele] = 0
+        for ele in s:
+            d[ele] = d[ele]+1
+        for ele in range(len(s)):
+            if d[s[ele]]==1:
+                return ele
+        return -1
+# more of non-pythonic way...to make analysis clear
